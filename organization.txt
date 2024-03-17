@@ -1,31 +1,49 @@
-my-tinder-app/
+my-pickup-sports-app/
 │
 ├── backend/ (Django backend)
-│   ├── mytinderapp/
+│   ├── mypickupapp/
 │   │   ├── settings.py (Django settings)
 │   │   ├── urls.py (URL configurations)
 │   │   └── wsgi.py (WSGI application for deployment)
+    ├── matches/ (app for match-making functionality)
+│       ├── models.py (match models, e.g., user matches, match status)
+│       ├── views.py (views for handling match operations)
+│       └── ...
+    ├── profiles/ (app for user profile functionality)
+│       ├── models.py (extended user profile models, e.g., bio, preferences, avatar)
+│       ├── views.py (views for profile viewing and editing)
+│       └── ...
 │   ├── users/ (app for user-related functionality)
 │   │   ├── models.py (user models)
 │   │   ├── views.py (views for user-related endpoints)
 │   │   └── ...
-│   ├── matches/ (app for match-related functionality)
-│   │   ├── models.py (match models)
-│   │   ├── views.py (views for match-related endpoints)
+│   ├── sports/ (app for sports selection functionality)
+│   │   ├── models.py (sports models)
+│   │   ├── views.py (views for sports-related endpoints)
+│   │   └── ...
+│   ├── teams/ (app for team management functionality)
+│   │   ├── models.py (team models)
+│   │   ├── views.py (views for team-related endpoints)
+│   │   └── ...
+│   ├── chat/ (app for chat functionality)
+│   │   ├── models.py (chat models)
+│   │   ├── views.py (views for chat-related endpoints)
 │   │   └── ...
 │   ├── manage.py (Django command-line utility)
 │   └── ...
 │
-├── frontend/ (React frontend)
-│   ├── src/
-│   │   ├── components/ (reusable UI components)
-│   │   ├── screens/ (individual app screens)
-│   │   ├── services/ (API calls to the backend)
-│   │   ├── App.js (main app component)
-│   │   └── index.js (entry point)
-│   ├── package.json (frontend dependencies)
+frontend/
+├── css/
+│   ├── style.css (general styles)
+│   ├── profile.css (styles specific to user profiles)
+│   ├── matches.css (styles specific to matches)
 │   └── ...
-│
-├── .gitignore (files to ignore in version control)
-├── README.md (project documentation)
+├── js/
+│   ├── script.js (general scripts)
+│   ├── profile.js (scripts for handling profile interactions)
+│   ├── matches.js (scripts for handling matches interactions)
+│   └── ...
+├── index.html (main entry point)
+├── profile.html (user profile page)
+├── matches.html (matches page)
 └── ...
