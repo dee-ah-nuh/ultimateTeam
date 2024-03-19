@@ -1,15 +1,29 @@
 document.getElementById('loginForm').addEventListener('submit', function(e) {
-    e.preventDefault(); // Prevent the default form submission
+    e.preventDefault();
 
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
-    console.log('Email:', email, 'Password:', password);
-
-    // Here, you would typically send the email and password to your backend for verification
-    // For demonstration purposes, we're just logging it to the console
-
-    // Example of redirection after successful login (you'll need to implement actual login logic)
-    window.location.href = 'choose-sport.html';
-
+    fetch('http://localhost:8000/api/login/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            // Include CSRF token if needed
+        },
+        body: JSON.stringify({ email: email, password: password })
+    })
+    .then(response => {
+        if (response.ok) {
+            return response.json(); // Process the success response
+        }
+        throw new Error('Login failed'); // Handle login failure
+    })
+    .then(data => {
+        console.log(data.message);
+        window.location.href = 'choose-sport.html'; // Redirect on success
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        // Optionally, inform the user that login failed
+    });
 });
