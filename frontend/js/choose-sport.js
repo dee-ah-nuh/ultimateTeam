@@ -4,7 +4,7 @@ document.querySelectorAll('.sport-btn').forEach(button => {
         const sportName = this.textContent;
         console.log('Selected sport:', sportName);
         // Here, you can redirect the user or take other actions based on the selection
-        window.location.href = 'profile.html';
+        window.location.href = 'choose-team-size.html';
 
     });
 });

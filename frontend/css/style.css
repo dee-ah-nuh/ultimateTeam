@@ -32,7 +32,6 @@ body, html {
     border: 1px solid #ddd;
     border-radius: 5px;
 }
-
 button {
     width: 100%;
     padding: 10px;
@@ -60,14 +59,284 @@ a:hover {
     text-decoration: underline;
 }
 
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7; 
+} 
 
-.sport-selection-container {
+
+
+
+
+
+/* LOGIN SETTINGS
+
+*/
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
     text-align: center;
-    /* Add more styling as needed */
+    background-color: #fff; /* Or a very light shade of green, if it fits your theme */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 10px;
+}
+
+.login-container h1 {
+    color: #004d00; /* Dark green */
+}
+
+
+
+
+/* FORM SETTINGS
+
+*/
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    color: #004d00; /* Dark green */
+}
+
+.form-group input[type=email],
+.form-group input[type=password] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Makes sure the padding doesn't affect the total width */
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    background-color: #ffa500; /* Orange */
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #e69500; /* A darker shade of orange */
+}
+
+p {
+    color: #004d00; /* Dark green */
+}
+
+a {
+    color: #ffa500; /* Orange */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* PROFILEEEEE SETTINGS
+
+
+ */
+/* Main container styles */
+/* Main container styles */
+/* Main container styles */
+.container {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff; /* For a light theme */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Header styles */
+.container h1 {
+    color: #004d00; /* Dark green */
+    margin-bottom: 20px;
+}
+
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+    border: 2px solid #004d00; /* Dark green border */
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff; /* White background */
+}
+
+.form-group label {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    color: #004d00; /* Dark green */
+    font-size: 1.2rem; /* Adjust label font size */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="email"],
+.form-group input[type="file"] {
+    width: calc(100% - 40px); /* Adjust width to fit inside the box */
+    padding: 10px;
+    border: none;
+    background-color: transparent; /* Make input invisible */
+    color: #004d00; /* Dark green text */
+    font-size: 1.2rem; /* Adjust input font size */
+}
+
+.form-group input:focus,
+.form-group input:not(:placeholder-shown) {
+    background-color: #f0f0f0; /* Slightly visible background on focus or when filled */
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label {
+    transform: translateY(-30px); /* Move label up when input is focused or filled */
+    background-color: #fff; /* White background behind label */
+    padding: 0 5px; /* Add some padding to the label */
+    border-radius: 5px; /* Round the corners of the label background */
+}
+
+
+/* Stats group styles */
+.stats-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+    align-items: end;
+}
+
+/* Button styles */
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    background-color: #ffa500; /* Orange */
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #e69500; /* Darker shade of orange */
+}
+
+/* 
+
+
+
+
+
+
+
+
+
+CHOOSE SPORT
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+/* ICONS FOR CHOOSE SPORT */
+
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+    vertical-align: middle; /* Align icons with text */
+    margin-right: 8px; /* Space between icon and text */
+}
+
+
+/* Heading styles */
+.sport-selection-container h1 {
+    font-size: 3rem; /* Adjust to match the size of the 4 squares */
+    color: #004d00; /* Dark green */
+    font-weight: bold; /* Adjust the font weight as needed */
+    text-align: center;
+    margin-bottom: 2rem; /* Adjust the bottom margin as needed */
+}
+
+.sport-selection-container h1 span {
+    color: #0000ff; /* Bright blue */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.sport-selection-container h1 span:hover {
+    color: #ffa500; /* Bright orange */
+}
+
+
+.sports-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for 4 buttons */
+    gap: 20px; /* Adjust the spacing between buttons */
+    max-width: 400px; /* Adjust based on the desired width */
+    margin: 0 auto; /* Center the grid */
 }
 
 .sport-btn {
-    margin: 10px;
-    padding: 10px 20px;
-    /* Add more styling as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* Adjust padding as needed */
+    border: none;
+    border-radius: 4px;
+    background-color: #ffa500; /* Orange */
+    color: white;
+    cursor: pointer;
+    font-size: 16px; /* Adjust font size as needed */
+    text-align: center;
 }
+
+.sport-btn span.material-symbols-outlined {
+    margin-top: 10px; /* Space between text and icon */
+}
+
+.sport-btn:hover {
+    background-color: #e69500; /* Darker shade of orange */
+}
+
+
+.sport-btn img {
+    width: 24px;
+    height: 24px; 
+    margin-right: 10px;
+}
+
+
+
