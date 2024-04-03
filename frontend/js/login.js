@@ -5,5 +5,5 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     console.log('Logging in...');
 
     // Redirect to the profile page as an example
-    window.location.href = 'profile.html';
+    window.location.href = 'choose-team-size.html';
 });
